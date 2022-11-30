@@ -58,13 +58,13 @@
 										<input type="radio" name="options" id="admin">
 										<div class="icon"><img src="assets/vendors/images/briefcase.svg" class="svg" alt=""></div>
 										<span>Soy</span>
-										Profesor
+										Admin
 									</label>
 									<label class="btn">
 										<input type="radio" name="options" id="user">
 										<div class="icon"><img src="assets/vendors/images/person.svg" class="svg" alt=""></div>
 										<span>Soy</span>
-										Alumno
+										Asistente
 									</label>
 								</div>
 							</div>
