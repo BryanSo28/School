@@ -30,6 +30,21 @@
                     <span class="micon dw dw-conference"></span><span class="mtext">Profesor</span>
                 </a>
             </li>
+            <li>
+                <a href="../Curso/curso.php" class="dropdown-toggle no-arrow">
+                    <span class="micon dw dw-file3"></span><span class="mtext">Curso</span>
+                </a>
+            </li>
+            <li>
+                <a href="../Entrevista/entrevista.php" class="dropdown-toggle no-arrow">
+                    <span class="micon dw dw-time-management"></span><span class="mtext">Entrevista</span>
+                </a>
+            </li>
+            <li>
+                <a href="../Matricula/matricula.php" class="dropdown-toggle no-arrow">
+                    <span class="micon dw dw-file-12"></span><span class="mtext">Matrícula</span>
+                </a>
+            </li>
         </ul>
     </div>
 </div>

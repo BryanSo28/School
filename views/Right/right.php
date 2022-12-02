@@ -19,7 +19,6 @@
             <a href="javascript:void(0);" class="btn btn-outline-primary sidebar-light ">Blanco</a>
             <a href="javascript:void(0);" class="btn btn-outline-primary sidebar-dark active">Negro</a>
         </div>
-
         <div class="reset-options pt-30 text-center">
             <button class="btn btn-danger" id="reset-settings">Reset Settings</button>
         </div>
