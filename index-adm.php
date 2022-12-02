@@ -69,13 +69,13 @@
 								</div>
 							</div>
 							<div class="input-group custom">
-								<input type="text" class="form-control form-control-lg" placeholder="Username">
+								<input type="text" class="form-control form-control-lg" name="usuario" placeholder="Username">
 								<div class="input-group-append custom">
 									<span class="input-group-text"><i class="icon-copy dw dw-user1"></i></span>
 								</div>
 							</div>
 							<div class="input-group custom">
-								<input type="password" class="form-control form-control-lg" placeholder="**********">
+								<input type="password" class="form-control form-control-lg" name="clave" placeholder="**********">
 								<div class="input-group-append custom">
 									<span class="input-group-text"><i class="dw dw-padlock1"></i></span>
 								</div>
@@ -96,10 +96,6 @@
 									<div class="input-group mb-0">
 										<a class="btn btn-primary btn-lg btn-block" href="index.html">Ingresar</a>
 									</div>
-									<!--<div class="font-16 weight-600 pt-10 pb-10 text-center" data-color="#707373">OR</div>
-									<div class="input-group mb-0">
-										<a class="btn btn-outline-primary btn-lg btn-block" href="register.html">Register To Create Account</a>
-									</div>-->
 								</div>
 							</div>
 						</form>

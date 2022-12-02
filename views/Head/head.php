@@ -27,3 +27,13 @@
 
     gtag('config', 'UA-119386393-1');
 </script>
+
+<link rel="stylesheet" type="text/css" href="../../assets/src/plugins/jquery-steps/jquery.steps.css">
+<link rel="stylesheet" type="text/css" href="../../assets/vendors/styles/style.css">
+
+<!-- switchery css -->
+<link rel="stylesheet" type="text/css" href="../../assets/src/plugins/switchery/switchery.min.css">
+<!-- bootstrap-tagsinput css -->
+<link rel="stylesheet" type="text/css" href="../../assets/src/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css">
+<!-- bootstrap-touchspin css -->
+<link rel="stylesheet" type="text/css" href="../../assets/src/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.css">

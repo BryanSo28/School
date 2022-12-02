@@ -16,6 +16,11 @@
                 </a>
             </li>
             <li>
+                <a href="../Usuario/usuario.php" class="dropdown-toggle no-arrow">
+                    <span class="micon dw dw-user-13"></span><span class="mtext">Usuario</span>
+                </a>
+            </li>
+            <li>
                 <a href="../Alumno/alumno.php" class="dropdown-toggle no-arrow">
                     <span class="micon dw dw-user-3"></span><span class="mtext">Alumno</span>
                 </a>

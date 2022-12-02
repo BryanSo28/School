@@ -131,6 +131,7 @@
 								<label class="custom-file-label">Choose file</label>
 							</div>
 						</div>
+						<button type="submit" class="btn btn-primary btn-lg" style="margin-left : 55em">Registrar</button>
 					</form>
 				</div>
 				<!-- horizontal Basic Forms End -->

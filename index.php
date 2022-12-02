@@ -51,7 +51,7 @@
 						<div class="login-title">
 							<h2 class="text-center text-primary">Login to E-Learning</h2>
 						</div>
-						<form>
+						<form action="" method="POST">
 							<div class="select-role">
 								<div class="btn-group btn-group-toggle" data-toggle="buttons">
 									<label class="btn active">
@@ -84,22 +84,19 @@
 								<div class="col-6">
 									<div class="custom-control custom-checkbox">
 										<input type="checkbox" class="custom-control-input" id="customCheck1">
-										<label class="custom-control-label" for="customCheck1">Remember</label>
+										<label class="custom-control-label" for="customCheck1">Recuerdáme</label>
 									</div>
 								</div>
 								<div class="col-6">
-									<div class="forgot-password"><a href="forgot-password.html">Forgot Password</a></div>
+									<div class="forgot-password"><a href="views/Password/password.php">Olvidé Contraseña</a></div>
 								</div><!--se dirigira a un modulo se enviará un correo para que el admin resetee la clave-->
 							</div>
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="input-group mb-0">
-										<a class="btn btn-primary btn-lg btn-block" href="index.html">Ingresar</a>
+										<button type="submit" class="btn btn-primary btn-lg btn-block">Ingresar</button>
+										<!--<a class="btn btn-primary btn-lg btn-block" href="index.html">Ingresar</a>-->
 									</div>
-									<!--<div class="font-16 weight-600 pt-10 pb-10 text-center" data-color="#707373">OR</div>
-									<div class="input-group mb-0">
-										<a class="btn btn-outline-primary btn-lg btn-block" href="register.html">Register To Create Account</a>
-									</div>-->
 								</div>
 							</div>
 						</form>
