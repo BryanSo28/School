@@ -1,3 +1,15 @@
+<?php   
+	include_once("../../controllers/usuario.php");
+	if ($_POST) {
+		$usuario = $_POST["usuario"];
+		$clave = $_POST["clave"];
+		$rol = $_POST["rol"];
+		$email = $_POST["email"];
+
+		$user = new usuarioController();
+		$user->insertUsuario($usuario,$clave,$rol,$email);
+	}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,34 +44,34 @@
 							<h4 class="text-blue h4">Registrar Usuario</h4>
 						</div>
 					</div>
-					<form>
+					<form action="" method="POST">
 						<div class="form-group">
                             <label>Persona</label>
-							<select class="custom-select2 form-control" name="state" style="width: 100%; height: 38px;">
-                                <option value="CA">California</option>
-                                <option value="NV">Nevada</option>
-                                <option value="OR">Oregon</option>
-                                <option value="WA">Washington</option>
+							<select class="custom-select2 form-control" name="dni" style="width: 100%; height: 38px;">
+                                <option value="74589876">74589876</option>
+                                <option value="73542819">73542819</option>
+                                <option value="64329863">64329863</option>
+                                <option value="94327541">94327541</option>
                             </select>
 						</div>
 						<div class="form-group">
 							<label>Usuario</label>
-							<input class="form-control" placeholder="brysoew" type="text">
+							<input class="form-control" placeholder="brysoew" name="usuario" type="text">
 						</div>
 						<div class="form-group">
 							<label>Password</label>
-							<input class="form-control" placeholder="************" type="password">
+							<input class="form-control" placeholder="************" name="clave" type="password">
 						</div>
 						<div class="form-group">
 							<label>Rol</label>
-							<select class="form-control">
-								<option>Profesor</option>
-                                <option>Alumno</option>
+							<select class="form-control" name="rol">
+								<option value="1">Profesor</option>
+                                <option value="2">Alumno</option>
 							</select>
 						</div>
                         <div class="form-group">
                             <label>Email</label>
-                            <input type="email" class="form-control" placeholder="example@gmail.com">
+                            <input type="email" class="form-control" placeholder="example@gmail.com" name="email">
                         </div>
                         <button type="submit" class="btn btn-primary btn-lg" style="margin-left : 55em">Registrar</button>
 					</form>

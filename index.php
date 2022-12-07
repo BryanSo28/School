@@ -1,3 +1,15 @@
+<?php
+
+	require_once("controllers/login.php");
+	if ($_POST) {
+		$usuario = $_POST["usuario"];
+		$clave = $_POST["clave"];
+
+		$login = new loginController();
+		$login->login($usuario,$clave);
+	}
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -69,13 +81,13 @@
 								</div>
 							</div>
 							<div class="input-group custom">
-								<input type="text" class="form-control form-control-lg" placeholder="Username">
+								<input type="text" class="form-control form-control-lg" name="usuario" placeholder="Username">
 								<div class="input-group-append custom">
 									<span class="input-group-text"><i class="icon-copy dw dw-user1"></i></span>
 								</div>
 							</div>
 							<div class="input-group custom">
-								<input type="password" class="form-control form-control-lg" placeholder="**********">
+								<input type="password" class="form-control form-control-lg" name="clave" placeholder="**********">
 								<div class="input-group-append custom">
 									<span class="input-group-text"><i class="dw dw-padlock1"></i></span>
 								</div>
