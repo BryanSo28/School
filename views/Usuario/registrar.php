@@ -1,14 +1,19 @@
 <?php   
 	include_once("../../controllers/usuario.php");
+	$user = new usuarioController();
+	$lista = $user->listDNI();
+
+
 	if ($_POST) {
 		$usuario = $_POST["usuario"];
 		$clave = $_POST["clave"];
 		$rol = $_POST["rol"];
 		$email = $_POST["email"];
-
-		$user = new usuarioController();
+		
 		$user->insertUsuario($usuario,$clave,$rol,$email);
 	}
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -48,10 +53,9 @@
 						<div class="form-group">
                             <label>Persona</label>
 							<select class="custom-select2 form-control" name="dni" style="width: 100%; height: 38px;">
-                                <option value="74589876">74589876</option>
-                                <option value="73542819">73542819</option>
-                                <option value="64329863">64329863</option>
-                                <option value="94327541">94327541</option>
+								<?php foreach ($lista as $res) {?>
+                                	<option value="<?php echo $res['dni'];?>"><?php echo $res['dni'];?></option>
+								<?php } ?>
                             </select>
 						</div>
 						<div class="form-group">

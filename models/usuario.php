@@ -27,6 +27,15 @@
             $statement->execute();
             return $resultado=$statement->fetchAll();
         }
+
+        public function listarDNI(){
+            $statement = "(SELECT dni FROM alumno where estado=1)
+                            union 
+                        (SELECT dni FROM usuarios where estado=1)";
+            $statement = $this->conectar->prepare($statement);
+            $statement->execute();
+            return $resultado=$statement->fetchAll();
+        }
     }
 
 ?>

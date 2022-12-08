@@ -1,10 +1,11 @@
 <?php
-
-	require_once("controllers/login.php");
+	require_once("config/conexion.php");
+	
 	if ($_POST) {
 		$usuario = $_POST["usuario"];
 		$clave = $_POST["clave"];
-
+		
+		require_once("controllers/login.php");
 		$login = new loginController();
 		$login->login($usuario,$clave);
 	}

@@ -1,5 +1,7 @@
 <?php
 
+    session_start();
+    
     class Conectar{
         private $usuario = "root";
         private $password = "";

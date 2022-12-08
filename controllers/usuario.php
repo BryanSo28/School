@@ -18,6 +18,11 @@
             $list = $this->user->listarUsuario();
             return $list;
         }
+
+        public function listDNI(){
+            $list = $this->user->listarDNI();
+            return $list;
+        }
     }
 
 ?>
