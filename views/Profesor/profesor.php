@@ -1,3 +1,7 @@
+<?php
+	require_once("../../config/conexion.php");
+	if(isset($_SESSION["id_usuario"])){
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -104,3 +108,8 @@
 	<!-- js -->
 	<?php include_once("../Js/js.php"); ?>
 </html>
+<?php
+	}else{
+		header("Location:index.php");
+	}
+?>

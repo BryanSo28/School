@@ -1,9 +1,10 @@
 <?php
+	require_once("../../config/conexion.php");
+	if(isset($_SESSION["id_usuario"])){
+		require_once("../../controllers/usuario.php");
 
-	require_once("../../controllers/usuario.php");
-
-	$list = new usuarioController();
-	$lista = $list->listUsuario();
+		$list = new usuarioController();
+		$lista = $list->listUsuario();
 
 ?>
 <!DOCTYPE html>
@@ -95,3 +96,8 @@
 	<!-- js -->
 	<?php include_once("../Js/js.php"); ?>
 </html>
+<?php
+	}else{
+		header("Location:index.php");
+	}
+?>

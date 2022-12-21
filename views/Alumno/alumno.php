@@ -1,3 +1,10 @@
+<?php
+	require_once("../../config/conexion.php");
+	if(isset($_SESSION["id_usuario"])){
+		require_once("../../controllers/alumno.php");
+		$alum = new alumnoController();
+		$alumno = $alum->listAlumno()
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,26 +43,29 @@
 							<thead>
 								<tr>
 									<th>Foto</th>
-									<th class="table-plus datatable-nosort">Name</th>
-									<th>Age</th>
-									<th>Office</th>
-									<th>Address</th>
-									<th>Start Date</th>
-									<th>Salart</th>
-									<th class="datatable-nosort">Action</th>
+									<th>Nombres</th>
+									<th>Apellidos</th>
+									<th>DNI</th>
+									<th>Género</th>
+									<th>Enfermedad</th>
+									<th>Teléfono Apo.</th>
+									<th>Fecha Creación</th>
+									<th>Acción</th>
 								</tr>
 							</thead>
 							<tbody>
+							<?php foreach ($alumno as $res) {?>
 								<tr>
 								<td class="table-plus">
-									<img src="../../assets/vendors/images/product-1.jpg" width="70" height="70" alt="">
+									<img src="fotos/<?php echo $res['foto'];?>" width="70" height="70" alt="">
 								</td>
-									<td class="table-plus">Gloria F. Mead</td>
-									<td>25</td>
-									<td>Sagittarius</td>
-									<td>2829 Trainer Avenue Peoria, IL 61602 </td>
-									<td>29-03-2018</td>
-									<td>$162,700</td>
+									<td class="table-plus"><?php echo $res['nombres'];?></td>
+									<td><?php echo $res['apellidos'];?></td>
+									<td><?php echo $res['dni'];?></td>
+									<td><?php echo $res['genero'];?></td>
+									<td><?php echo $res['enfermedad'];?></td>
+									<td><?php echo $res['tel_apo'];?></td>
+									<td><?php echo $res['fecha_creacion'];?></td>
 									<td>
 										<div class="dropdown">
 											<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
@@ -69,29 +79,7 @@
 										</div>
 									</td>
 								</tr>
-								<tr>
-									<td class="table-plus">
-										<img src="../../assets/vendors/images/product-1.jpg" width="70" height="70" alt="">
-									</td>
-									<td class="table-plus">Andrea J. Cagle</td>
-									<td>30</td>
-									<td>Gemini</td>
-									<td>1280 Prospect Valley Road Long Beach, CA 90802 </td>
-									<td>29-03-2018</td>
-									<td>$162,700</td>
-									<td>
-										<div class="dropdown">
-											<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
-												<i class="dw dw-more"></i>
-											</a>
-											<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-												<a class="dropdown-item" href="#"><i class="dw dw-eye"></i> View</a>
-												<a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Edit</a>
-												<a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
-											</div>
-										</div>
-									</td>
-								</tr>
+							<?php } ?>
 							</tbody>
 						</table>
 					</div>
@@ -104,3 +92,8 @@
 	<!-- js -->
 	<?php include_once("../Js/js.php"); ?>
 </html>
+<?php
+	}else{
+		header("Location:index.php");
+	}
+?>

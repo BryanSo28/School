@@ -112,12 +112,12 @@
 				<table class="data-table table nowrap">
 					<thead>
 						<tr>
-							<th class="table-plus datatable-nosort">Product</th>
+							<th>Product</th>
 							<th>Name</th>
 							<th>Color</th>
 							<th>Size</th>
 							<th>Price</th>
-							<th class="datatable-nosort">Action</th>
+							<th>Action</th>
 						</tr>
 					</thead>
 					<tbody>
